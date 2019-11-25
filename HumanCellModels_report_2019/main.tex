@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{authblk}
+\usepackage{multicol}
+\usepackage{nonfloat}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{pdfpages}
+\usepackage{appendix}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage[sectionbib]{natbib}
+\usepackage{chapterbib}
+\usepackage{subcaption}
+\usepackage{verbatim}
+
+% create alias '\_' for text mode: gives underscore without math mode being implicitly invoked
+\chardef\_=`_
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+
+%%%%%%%%%%%%% BEGINING DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\newcommand{\Includepdf}[3]{\section{#1}\includepdf[pages=#2, scale=0.8, pagecommand={\thispagestyle{headings}}]{#3}}
+%\newcommand{\IncludepdfSubSec}[3]{\subsection{#1}\includepdf[pages=#2, scale=0.8, pagecommand={\thispagestyle{headings}}]{#3}}
+
+%\includepdf[pages=1,pagecommand=\section{Section Heading}]{testpdf}
+%\includepdf[pages=2-,pagecommand={}]{testpdf}
+%\newcommand{\IncludeCellReport}[2]{\includepdf[pages=1, scale=0.65, pagecommand=\subsection{#1}]{#2}\includepdf[pages=2-, scale=0.7, pagecommand={}]{#2}}
+%\newcommand{\IncludeCellReportSec}[2]{\includepdf[pages=1, scale=0.65, pagecommand=\section{#1}]{#2}\includepdf[pages=2-, scale=0.7, pagecommand={}]{#2}}
+%\newcommand{\IncludeOnePageSec}[2]{\includepdf[pages=1, scale=0.65, pagecommand=\section{#1}]{#2}}
+
+\newcommand{\IncludepdfSecNoScale}[3]{\section{#1}\includepdf[pages=#2, pagecommand={\thispagestyle{headings}}]{#3}}
+%\newcommand{\IncludepdfSecScaleNine}[3]{\section{#1}\includepdf[pages=#2, scale=0.9, pagecommand={\thispagestyle{headings}}]{#3}}
+%\newcommand{\IncludepdfSecScaleSeven}[3]{\section{#1}\includepdf[pages=#2, scale=0.7, pagecommand={\thispagestyle{headings}}]{#3}}
+
+
+%\renewcommand\bibsection{\section*{References}}
+
+%\frontmatter
+%\maketitle
+\include{title}
+
+\chapter*{Intoduction\protect\\ \Large{Natal\'i Barros Zulaica}}
+\include{Introduction}
+
+\chapter*{Data gathering\protect\\ \Large{Natal\'i Barros Zulaica}}
+\include{gatheringData}
+
+
+\chapter*{Morphologies\protect\\ \Large{Lida Kanari}}
+\include{morphologies}
+
+
+\chapter*{Single cell electrophysiology\protect\\ \Large{Werner Van Geit, Tanguy Damart and Marie Reva}}
+\include{SingleCellElectrophys}
+
+
+\chapter*{Final cell model\protect\\ \Large{Authors}}
+\include{Final}
+
+\chapter*{Conclusions\protect\\ \Large{Authors}}
+\include{Conclusions}
+
+
+\bibliographystyle{jtbnew}
+\bibliographystyle{plainnat}
+
+%%%%%%%%% CREATE APENDIX %%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+%\noappendicestocpagenum
+%\addappheadtotoc
+
+% Adjustments headers
+
+%\chapter{Appendices}
+
+
+
+\end{document}

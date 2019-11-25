@@ -1,0 +1,43 @@
+
+\section{Conclusions}
+
+\section{section}
+
+\subsection{subsection}
+
+First: how to create a list
+\begin{itemize}
+\item item1
+\item item2
+\item item 3
+\end{itemize}
+
+Second: how to introduce a figure with its caption
+%%% introduce figure in text
+\begin{figure}[h!]
+\includegraphics[width=0.8\textwidth]{figs/Last.png}
+\caption{Example of how to introduce a figure.}
+\label{fig_test}
+\end{figure}
+
+
+This is how we should reference figures in the text (Fig.\ref{fig_test}) \\
+
+This is how you should cite a bibliographic reference \citet{richardson2008measurement}
+
+Third: how to introduce a table\\
+
+%%% create a table
+\begin{tabular}{ | p{5cm} | p{5cm} |}\hline
+WHATEVER 1 & WHATEVER 2 \\ \hline
+A & B\\ \hline
+C & D\\ \hline
+E & F\\ \hline
+\end{tabular}\\ \\
+
+
+\subsubsection{Actions}
+Work is ongoing.
+
+\bibliographystyle{apalike}
+\bibliography{refs}{}
